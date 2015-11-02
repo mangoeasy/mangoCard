@@ -12,7 +12,7 @@ namespace Mango_Cards.Service
 
         public BaseService(MangoCardsDataContext dbContext)
         {
-            DbContext = dbContext;
+            DbContext = dbContext; 
         }
 
         public void Dispose()
