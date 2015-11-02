@@ -8,7 +8,7 @@ namespace MangoCards.Test
     {
         [TestMethod]
         public void TestMethod1()
-        {
+        { 
         }
     }
 }
