@@ -56,10 +56,6 @@
     <Compile Include="Services\AccountService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Mango-Cards.Library\Mango-Cards.Library.csproj">
       <Project>{3EA9638D-90A0-491F-92E7-4C8AAADE902D}</Project>
       <Name>Mango-Cards.Library</Name>
