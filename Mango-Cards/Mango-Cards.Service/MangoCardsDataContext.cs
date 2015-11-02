@@ -1,24 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Mango_Cards.Library.Models;
 using Mango_Cards.Library.Models.Interfaces;
 using Mango_Cards.Library.Services;
 
-namespace Mango_Cards.Web.Tests
+namespace Mango_Cards.Service
 {
     public class MangoCardsDataContext : DbContext, IDataContext
     {
-
         public IDbSet<Account> Accounts { get; set; }
         public IDbSet<Company> Companies { get; set; }
+
         IDbSet<TEntity> IDataContext.Set<TEntity>()
         {
             return this.Set<TEntity>();
         }
+
         public override int SaveChanges()
         {
             var entities = ChangeTracker.Entries<IDtStamped>();
@@ -38,14 +35,17 @@ namespace Mango_Cards.Web.Tests
 
             return base.SaveChanges();
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //modelBuilder.Configurations.Add(new CategoryMapping());
             //modelBuilder.Configurations.Add(new AvatarMapping());
             //modelBuilder.Configurations.Add(new LetterMapping());
             //modelBuilder.Configurations.Add(new RetailerMapping());
-            //modelBuilder.Configurations.Add(new SiteMapping());           
+            //modelBuilder.Configurations.Add(new SiteMapping());
+
             base.OnModelCreating(modelBuilder);
         }
     }
+
 }
