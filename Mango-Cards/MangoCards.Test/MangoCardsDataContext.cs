@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Mango_Cards.Library.Models;
 using Mango_Cards.Library.Models.Interfaces;
 using Mango_Cards.Library.Services;

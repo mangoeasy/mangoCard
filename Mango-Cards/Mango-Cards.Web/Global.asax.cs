@@ -9,6 +9,7 @@ namespace Mango_Cards.Web
     {
         protected void Application_Start()
         {
+            UnityConfig.RegisterComponents();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
